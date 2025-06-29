@@ -5,6 +5,7 @@ import Home from './home/Home';
 import Resume from './component/Resume';
 import Achivements from './component/Achivements/Achivements';
 import Projects from './component/Projects';
+import ComingSoon from './component/Achivements/ComingSoon';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/Archieve" element={<Achivements />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="*" element={<ComingSoon page="This page" />} />
       </Routes>
     </Router>
     </div>
