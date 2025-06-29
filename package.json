@@ -1,16 +1,16 @@
 {
   "name": "protfolio",
-  "homepage": "https://vishal2512-hub.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://vishal2512-hub.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --include node_modules"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
