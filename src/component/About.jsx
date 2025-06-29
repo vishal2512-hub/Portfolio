@@ -1,9 +1,11 @@
 // src/components/About.js
 import React from 'react';
 import './About.css';
-import aboutImg from '../assets/work.webp'; // Replace with your image
+import aboutImg from '../assets/work.webp'; 
+import { useNavigate } from 'react-router-dom'; 
 
 function About() {
+    const navigate = useNavigate(); 
   return (
     <section className="about-section" id="about">
       <div className="about-container">
@@ -25,8 +27,8 @@ function About() {
             produce outstanding web applications.
           </p>
           <div className="btn-group">
-            <button className="btn primary">More Details</button>
-            <button className="btn secondary">View Resume</button>
+            <button className="btn secondary" onClick={() => navigate('/resume')}>
+              View Resume</button>
           </div>
         </div>
       </div>
