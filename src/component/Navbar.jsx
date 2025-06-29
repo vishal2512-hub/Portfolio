@@ -14,7 +14,7 @@ function Navbar() {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="/Project">Projects</a>
+          <Link to="/projects">Projects</Link> {/* Changed to Link */}
         </li>
         <li>
           <Link to="/resume">My Resume</Link>
