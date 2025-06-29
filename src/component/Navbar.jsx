@@ -1,8 +1,13 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+  
+  // Check if we're on the home page
+  const isHomePage = location.pathname === '/';
+
   return (
     <nav className="navbar">
       <div className="logo">Vishal.dev</div>
@@ -11,20 +16,27 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          {isHomePage ? (
+            <a href="#about">About</a>
+          ) : (
+            <Link to="/about">About</Link>
+          )}
         </li>
         <li>
-          <Link to="/projects">Projects</Link> {/* Changed to Link */}
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/resume">My Resume</Link>
-        </li>
-
-        <li>
-          <Link to="/Archieve">Achivements</Link>
+          <Link to="/resume">Resume</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/achievements">Achievements</Link>
+        </li>
+        <li>
+          {isHomePage ? (
+            <a href="#contact">Contact</a>
+          ) : (
+            <Link to="/contact">Contact</Link>
+          )}
         </li>
       </ul>
     </nav>
