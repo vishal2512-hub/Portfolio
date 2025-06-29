@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
 export default defineConfig({
   plugins: [react()],
-    base: "/Portfolio/",
+  base: "/Portfolio/",
   build: {
     rollupOptions: {
-      external: ['react-icons/fa']
+      // Remove react-icons from external (let Vite bundle it)
+      external: [] 
     }
   }
 });
