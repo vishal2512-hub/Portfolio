@@ -1,42 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const location = useLocation();
-  
-  // Check if we're on the home page
   const isHomePage = location.pathname === '/';
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav className="navbar">
       <div className="logo">Vishal.dev</div>
-      <ul className="nav-links">
+
+      <div className="hamburger" onClick={toggleMenu}>
+        ☰
+      </div>
+
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <li><Link to="/" onClick={closeMenu}>Home</Link></li>
         <li>
-          <Link to="/">Home</Link>
+          {isHomePage
+            ? <a href="#about" onClick={closeMenu}>About</a>
+            : <Link to="/about" onClick={closeMenu}>About</Link>}
         </li>
+        <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
+        <li><Link to="/resume" onClick={closeMenu}>Resume</Link></li>
+        <li><Link to="/achievements" onClick={closeMenu}>Achievements</Link></li>
         <li>
-          {isHomePage ? (
-            <a href="#about">About</a>
-          ) : (
-            <Link to="/about">About</Link>
-          )}
-        </li>
-        <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/resume">Resume</Link>
-        </li>
-        <li>
-          <Link to="/achievements">Achievements</Link>
-        </li>
-        <li>
-          {isHomePage ? (
-            <a href="#contact">Contact</a>
-          ) : (
-            <Link to="/contact">Contact</Link>
-          )}
+          {isHomePage
+            ? <a href="#contact" onClick={closeMenu}>Contact</a>
+            : <Link to="/contact" onClick={closeMenu}>Contact</Link>}
         </li>
       </ul>
     </nav>

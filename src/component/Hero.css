@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fefefe;
+  gap: 30px;
 }
 
 .hero-left {
@@ -34,10 +35,44 @@
   color: #007bff;
 }
 
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .hero-right img {
   width: 320px;
   height: 320px;
   border-radius: 50%;
   border: 3px solid #ccc;
   object-fit: cover;
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .hero-icons a {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+
+  .hero-right img {
+    width: 220px;
+    height: 220px;
+    margin-top: 20px;
+  }
 }
