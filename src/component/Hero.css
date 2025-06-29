@@ -1,0 +1,43 @@
+.hero {
+  padding: 100px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-left h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.hero-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: black;
+  transition: color 0.3s;
+}
+.hero-icons a:hover {
+  color: #007bff;
+}
+
+.hero-right img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  object-fit: cover;
+}

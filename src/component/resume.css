@@ -1,0 +1,66 @@
+/* Resume.css */
+.resume-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.section-label {
+  margin: 50px 0px;
+  color: #007bff;
+  font-weight: bold;
+    text-align: start;
+  text-transform: uppercase;
+  font-size: 1.95rem;
+  margin-bottom: 10px;
+}
+
+.resume-heading {
+  font-size: 1.6rem;
+      text-align: start;
+
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.resume-preview img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.last-updated {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.resume-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn.preview {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn.download {
+  background-color: #0056b3;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

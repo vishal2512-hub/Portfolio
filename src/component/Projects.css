@@ -1,0 +1,144 @@
+/* Projects.css */
+.projects-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.section-label {
+  color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.projects-heading {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-thumb img {
+  width: 100%;
+  max-width: 450px;
+  display: block;
+}
+
+.project-content {
+  flex: 1;
+  padding: 30px;
+  text-align: left;
+}
+
+.project-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.project-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-tags span {
+  background: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.project-buttons .btn {
+  margin-right: 12px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn.demo {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn.github {
+  background-color: #24292e;
+  color: #fff;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: #000;
+}
+
+.modal-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #fff;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
