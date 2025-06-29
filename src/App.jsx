@@ -9,7 +9,7 @@ import Projects from './component/Projects';
 function App() {
   return (
     <div className="App">
-     <Router>
+     <Router basename='/Portfolio'>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
